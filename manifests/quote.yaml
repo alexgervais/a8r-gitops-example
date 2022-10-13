@@ -19,6 +19,16 @@ spec:
   prefix: /backend/
   service: quote-duplicate
 ---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: quote-backend-duplicate-twice
+  namespace: gitops-demo
+spec:
+  hostname: "*"
+  prefix: /backend/
+  service: quote-duplicate-twice
+---
 apiVersion: v1
 kind: Service
 metadata:
